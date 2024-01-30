@@ -16,10 +16,14 @@ function verificaSeExisteAluno(aluno){
 function exibeMediaNotaAluno(aluno){
     
     if(verificaSeExisteAluno(aluno) == true){
-        const indice = listaMediaDeAluno[0].indexOf(aluno);
+        // const alunos = listaMediaDeAluno[0];
+        // const medias = listaMediaDeAluno[1];
+        const [alunos, medias] = listaMediaDeAluno;
+        const indice = alunos.indexOf(aluno);
+        const mediaAluno = medias[indice];
+        
         console.log(`${aluno} está cadastrado e seu índice é ${indice}`);
     }
 }
 
-
-exibeMediaNotaAluno("João")
+exibeMediaNotaAluno("João");
